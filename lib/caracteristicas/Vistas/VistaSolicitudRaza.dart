@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 
-class SolicitarRaza extends StatelessWidget {
-  const SolicitarRaza({super.key});
+class SolicitudRaza extends StatelessWidget {
+  const SolicitudRaza({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Column( 
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Escribe la Raza A Buscar"),
