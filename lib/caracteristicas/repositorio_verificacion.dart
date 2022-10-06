@@ -7,7 +7,8 @@ import 'dominio/problemas.dart';
 abstract class RepositorioVerificacion {
   Either<Problema, RegistroRaza> obtenerRegistroRaza(NickFormado raza);
 }
-List campos = ['message', 'status'];
+
+List campos = ['status', 'message'];
 
 class RepositorioPruebasVerificacion extends RepositorioVerificacion {
   final String _dingo = """{"message":[],"status":"success"} """;
@@ -27,16 +28,13 @@ class RepositorioPruebasVerificacion extends RepositorioVerificacion {
   @override 
   Either<Problema,RegistroRaza> obtenerRegistroRaza(NickFormado raza){
     if (raza.valor == 'dingo') {
-      final documento = jsonDecode(_dingo);
-      return obtRazaJson(documento);
+      return obtRazaJson(_dingo);
     }
      if (raza.valor == 'bulldog') {
-      final documento = jsonDecode(_bulldog);
-      return obtRazaJson(documento);
+      return obtRazaJson(_bulldog);
     }
     if (raza.valor == 'gato') {
-      final documento = jsonDecode(_gato);
-      return obtRazaJson(documento);
+      return obtRazaJson(_gato);
     }
     if (raza.valor == 'Incorrecto') {
       return left(IncorrectoJson());
