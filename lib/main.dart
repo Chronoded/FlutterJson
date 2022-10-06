@@ -4,7 +4,7 @@ import 'package:razajsonapp/caracteristicas/verificacion/bloc.dart';
 import 'caracteristicas/Vistas/VistaCreandose.dart';
 
 void main() {
-  runApp(const Aplicacion());
+  runApp(const AppInyectada());
 }
 
 class AppInyectada extends StatelessWidget {
@@ -30,7 +30,7 @@ class Aplicacion extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Builder(builder: (context) {
-          var estado = context.watch()<BlocVerificacion>().state;
+          var estado = context.watch<BlocVerificacion>().state;
 
           if (estado is Creandose) {
              return const VistaCreandose();
