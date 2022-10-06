@@ -1,6 +1,7 @@
 //Estados y Eventos
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:razajsonapp/caracteristicas/dominio/varDominio.dart';
 
 class Estado {}
 
@@ -28,7 +29,10 @@ class Evento {}
 
 class Creado extends Evento{}
 
-class NombreRecibidoRaza extends Evento{}
+class NombreRecibidoRaza extends Evento{
+  final NickFormado raza;
+  NombreRecibidoRaza(this.raza);
+}
 
 class Verificacion extends Evento {}
 
