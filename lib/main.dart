@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:razajsonapp/caracteristicas/repositorio_verificacion.dart';
 import 'package:razajsonapp/caracteristicas/verificacion/bloc.dart';
 import 'caracteristicas/Vistas/VistaCreandose.dart';
 import 'caracteristicas/Vistas/VistaSolicitudRaza.dart';
@@ -15,7 +16,7 @@ class AppInyectada extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) {
-        BlocVerificacion blocVerificacion = BlocVerificacion();
+        BlocVerificacion blocVerificacion = BlocVerificacion(RepositorioPruebasVerificacion());
         Future.delayed(const Duration(seconds: 1),(){
           blocVerificacion.add(Creado());
         });
