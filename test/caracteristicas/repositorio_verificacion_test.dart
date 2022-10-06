@@ -14,11 +14,12 @@ void main() {
       resultado.match((l) {
         expect(false, equals(true));
       }, (r) {
-        expect(r.SubRazas, equals(["boston" "english", "french"]));
-        expect(r.nomRaza, equals("success"));
+        expect(r.SubRazas, equals(["boston", "english", "french"]));
+        expect(r.nomRaza, equals('success'));
       });
     });
   });
+
 
     test('Con dingo me regresa valor sin subrazas', () {
       RepositorioPruebasVerificacion repositorio =

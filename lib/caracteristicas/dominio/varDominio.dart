@@ -1,7 +1,6 @@
 class NickFormado {
   late final String valor;
 
-
   NickFormado._(this.valor);
 
   factory NickFormado.constructor(String propuesta){
@@ -10,4 +9,7 @@ class NickFormado {
     }
     return NickFormado._(propuesta);
   }
+  
 }
+
+class RazaError implements Exception {}

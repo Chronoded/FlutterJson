@@ -1,19 +1,19 @@
 const String mensajeRegistroRazaError = "Registro de raza Incorrecta";
 class RegistroRaza{
-  late final List<String> nomRaza;
+  late final List nomRaza;
   late final String SubRazas;
 
   RegistroRaza._(this.nomRaza, this.SubRazas);
 
   factory RegistroRaza.constructor({
-    required List<String> propuestaR,
+    required List propuestaR,
     required String propuestaSubRaza,
   }){
-     if (propuestaR == "Breed not found (master breed does not exist)") {
+     if (propuestaR == 'Breed not found (master breed does not exist)') {
       throw mensajeRegistroRazaError;
     }
 
-    if (propuestaSubRaza == "error") {
+    if (propuestaSubRaza == 'error') {
       throw mensajeRegistroRazaError;
     }
     RegistroRaza._(propuestaR, propuestaSubRaza);
