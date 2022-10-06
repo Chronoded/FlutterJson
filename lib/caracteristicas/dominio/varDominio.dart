@@ -6,7 +6,7 @@ class NickFormado {
 
   factory NickFormado.constructor(String propuesta){
     if (propuesta.trim().isEmpty) {
-      throw ('Nick esta mal formado');
+      throw ('Nombre raza esta mal formado');
     }
     return NickFormado._(propuesta);
   }
